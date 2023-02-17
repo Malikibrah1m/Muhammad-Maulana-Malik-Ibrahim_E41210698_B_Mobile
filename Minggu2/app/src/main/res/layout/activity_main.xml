@@ -104,112 +104,109 @@
             android:text="7"
             android:textSize="30dp"
             android:onClick="VerticalScroll"></Button>
+
         <TextView
             android:id="@+id/LinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Linear Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="290dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn1"
+            app:layout_constraintStart_toStartOf="@+id/btn1"
+            app:layout_constraintTop_toBottomOf="@+id/btn1"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/RelativeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Relative Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn4"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="290dp"
-            android:layout_marginRight="130dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn2"
+            app:layout_constraintStart_toStartOf="@+id/btn2"
+            app:layout_constraintTop_toBottomOf="@+id/btn2"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/ConstraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Constraint Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn5"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="290dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn3"
+            app:layout_constraintStart_toStartOf="@+id/btn3"
+            app:layout_constraintTop_toBottomOf="@+id/btn3"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/FrameLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Frame Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="115dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn4"
+            app:layout_constraintStart_toStartOf="@+id/btn4"
+            app:layout_constraintTop_toBottomOf="@+id/btn4"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/TableLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Table Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn7"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="115dp"
-            android:layout_marginRight="130dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn5"
+            app:layout_constraintStart_toStartOf="@+id/btn5"
+            app:layout_constraintTop_toBottomOf="@+id/btn5"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/MaterialLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Material Layout"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn8"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="115dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn6"
+            app:layout_constraintStart_toStartOf="@+id/btn6"
+            app:layout_constraintTop_toBottomOf="@+id/btn6"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/ScrollViewLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vertical Scroll"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="522dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn7"
+            app:layout_constraintStart_toStartOf="@+id/btn7"
+            app:layout_constraintTop_toBottomOf="@+id/btn7"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/ScrollViewHorizontalLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Horizontal Scroll"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn7"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="522dp"
-            android:layout_marginRight="120dp"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
             android:textSize="16dp"
-            android:textColor="#000000"/>
+            app:layout_constraintEnd_toEndOf="@+id/btn8"
+            app:layout_constraintStart_toStartOf="@+id/btn8"
+            app:layout_constraintTop_toBottomOf="@+id/btn8"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

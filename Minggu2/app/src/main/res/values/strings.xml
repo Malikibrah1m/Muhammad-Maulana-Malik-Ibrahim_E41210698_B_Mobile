@@ -4,4 +4,5 @@
     <string name="user">Masukkan username</string>
     <string name="pass">Masukkan password</string>
     <string name="Home">Dashboard</string>
+    <string name="email">Masukkan email</string>
 </resources>

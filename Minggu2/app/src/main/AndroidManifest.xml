@@ -12,6 +12,30 @@
         android:theme="@style/Theme.Minggu2"
         tools:targetApi="31">
         <activity
+            android:name=".HorizontalScroll"
+            android:exported="true" />
+        <activity
+            android:name=".VerticalScroll"
+            android:exported="true" />
+        <activity
+            android:name=".MaterialDesign"
+            android:exported="true" />
+        <activity
+            android:name=".TableLayout"
+            android:exported="true" />
+        <activity
+            android:name=".RelativeLayout"
+            android:exported="true" />
+        <activity
+            android:name=".ContrainsLayout"
+            android:exported="true" />
+        <activity
+            android:name=".FrameLayout"
+            android:exported="true" />
+        <activity
+            android:name=".LinearLayout"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

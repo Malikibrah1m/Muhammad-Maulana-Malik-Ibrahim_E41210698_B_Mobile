@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String[] daftar;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             case 2 :
                                 SQLiteDatabase db = dbcenter.getReadableDatabase();
                                 db.execSQL("delete from biodata where nama = '"+selection+"'");
+                                Toast.makeText(MainActivity.this, "Berhasil menghapus data", Toast.LENGTH_SHORT).show();
                                 RefreshList();
                                 break;
                         }

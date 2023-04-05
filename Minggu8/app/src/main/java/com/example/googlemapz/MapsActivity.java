@@ -47,9 +47,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap = googleMap;
 
+
         // Berikan tanda pada lokasi Lumajang di MAP, dan coba geser-geser map
         LatLng lumajang = new LatLng(-8.1335, 113.2248);
-        mMap.addMarker(new MarkerOptions().position(lumajang).title("Koordinat tepat berada di Kantor Bupati Lumajang"));
+        mMap.addMarker(new MarkerOptions().position(lumajang).title("Lokasi di kantor bupati Lumajang"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(lumajang));
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SensorApp</string>
+    <string name="label_brightness">Level : %1$.2f lux</string>
 </resources>

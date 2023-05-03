@@ -52,7 +52,7 @@ public class AllSensor extends AppCompatActivity {
 
             if (item != null){
                 viewHolder.itemView.setText(idSensor+". Nama : "+ item.getName()+ "\nInt Type : " +
-                        item.getType()+ "\nPower : "+ item.getPower() + "mAh\nMax range : "+ item.getMaximumRange());
+                        item.getType()+ "\nPower : "+ item.getPower() + " mAh\nMax range : "+ item.getMaximumRange());
             }
             return convertView;
         }

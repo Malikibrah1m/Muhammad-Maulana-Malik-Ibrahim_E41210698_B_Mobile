@@ -11,6 +11,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -19,6 +21,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class LightSensor extends AppCompatActivity implements SensorEventListener {
 
@@ -29,6 +32,8 @@ public class LightSensor extends AppCompatActivity implements SensorEventListene
     private GraphView mGraph;
     private LineGraphSeries<DataPoint> mSeriesLight;
     private double graphLastAccelXValues = 5d;
+
+    public static boolean isPlaying = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,15 +63,25 @@ public class LightSensor extends AppCompatActivity implements SensorEventListene
                 graphLastAccelXValues += 0.15d;
                 mSeriesLight.appendData(new DataPoint(graphLastAccelXValues, sensorEvent.values[0]),true, 33);
 
-                if (sensorEvent.values[0] == 5) {
+                if (sensorEvent.values[0] == 0) {
                     mediaPlayer = new MediaPlayer();
 
                     try {
-                        AssetFileDescriptor as = this.getAssets().openFd("cahaya_gelap.mp3");
-                        mediaPlayer.setDataSource(as.getFileDescriptor(), as.getStartOffset(), as.getLength());
-                        as.close();
-                        mediaPlayer.prepare();
-                        mediaPlayer.start();
+                        if (!isPlaying) {
+                            AssetFileDescriptor as = this.getAssets().openFd("cahaya_gelap.mp3");
+                            mediaPlayer.setDataSource(as.getFileDescriptor(), as.getStartOffset(), as.getLength());
+                            as.close();
+                            mediaPlayer.prepare();
+                            mediaPlayer.start();
+                            isPlaying = true;
+
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            isPlaying = false;
+                                        }
+                                    }, mediaPlayer.getDuration());
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -74,11 +89,21 @@ public class LightSensor extends AppCompatActivity implements SensorEventListene
                     mediaPlayer = new MediaPlayer();
 
                     try {
-                        AssetFileDescriptor as = this.getAssets().openFd("cahaya_terang.mp3");
-                        mediaPlayer.setDataSource(as.getFileDescriptor(), as.getStartOffset(), as.getLength());
-                        as.close();
-                        mediaPlayer.prepare();
-                        mediaPlayer.start();
+                        if (!isPlaying) {
+                            AssetFileDescriptor as = this.getAssets().openFd("cahaya_terang.mp3");
+                            mediaPlayer.setDataSource(as.getFileDescriptor(), as.getStartOffset(), as.getLength());
+                            as.close();
+                            mediaPlayer.prepare();
+                            mediaPlayer.start();
+                            isPlaying = true;
+
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            isPlaying = false;
+                                        }
+                                    }, mediaPlayer.getDuration());
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
